@@ -23,7 +23,17 @@ struct AppView: View {
     
     @ViewBuilder
     private var mainApp: some View {
-        HomeCoordinator()
+        VStack(spacing: 0) {
+            AppHeaderView { actionType in
+                switch actionType {
+                case .left:
+                    break
+                case .right:
+                    break
+                }
+            }
+            HomeCoordinator()
+        }
     }
 }
 
