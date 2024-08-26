@@ -10,6 +10,7 @@ import SwiftUI
 // MARK: - TabbarView
 struct TabbarView: View {
     var items: [ItemModel] = []
+    var onTap: ((String) -> Void)?
     private let height: CGFloat = 50
     
     // MARK: - Entry point
@@ -20,6 +21,9 @@ struct TabbarView: View {
                 ItemView(text: item.text) {
                     Image(systemName: item.imgName)
                         .resizable()
+                }
+                .onTapGesture {
+                    onTap?(item.text)
                 }
                 Spacer()
             }
@@ -89,7 +93,9 @@ private extension TabbarView {
         ]
         var body: some View {
             VStack {
-                TabbarView(items: tab_5)
+                TabbarView(items: tab_5) { item in
+                    print("==>> tap on: \(item)")
+                }
                 TabbarView(items: tab_3)
                 TabbarView(items: tab_2)
                 Button(action: {
