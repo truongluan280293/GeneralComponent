@@ -13,6 +13,7 @@
 		7975E1BA2C7A178700DF151C /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7975E1B92C7A178700DF151C /* AppState.swift */; };
 		7975E1BE2C7B6EE100DF151C /* AppHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7975E1BD2C7B6EE100DF151C /* AppHeaderView.swift */; };
 		7975E1C12C7B739A00DF151C /* NavView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7975E1C02C7B739A00DF151C /* NavView.swift */; };
+		7975E1C42C7CBDCA00DF151C /* TabbarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7975E1C32C7CBDCA00DF151C /* TabbarView.swift */; };
 		7993E8462C4FF10C00EA7785 /* generalcomponentsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7993E8452C4FF10C00EA7785 /* generalcomponentsApp.swift */; };
 		7993E8482C4FF10C00EA7785 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7993E8472C4FF10C00EA7785 /* ContentView.swift */; };
 		7993E84A2C4FF10C00EA7785 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7993E8492C4FF10C00EA7785 /* Assets.xcassets */; };
@@ -53,6 +54,7 @@
 		7975E1B92C7A178700DF151C /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		7975E1BD2C7B6EE100DF151C /* AppHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppHeaderView.swift; sourceTree = "<group>"; };
 		7975E1C02C7B739A00DF151C /* NavView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavView.swift; sourceTree = "<group>"; };
+		7975E1C32C7CBDCA00DF151C /* TabbarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarView.swift; sourceTree = "<group>"; };
 		7993E8422C4FF10C00EA7785 /* generalcomponents.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = generalcomponents.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7993E8452C4FF10C00EA7785 /* generalcomponentsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = generalcomponentsApp.swift; sourceTree = "<group>"; };
 		7993E8472C4FF10C00EA7785 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -125,6 +127,7 @@
 		7975E1BB2C7B6EC200DF151C /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				7975E1C22C7CBDBB00DF151C /* TabbarView */,
 				7975E1BF2C7B738900DF151C /* NavigationView */,
 				7975E1BC2C7B6ED100DF151C /* AppHeader */,
 			);
@@ -145,6 +148,14 @@
 				7975E1C02C7B739A00DF151C /* NavView.swift */,
 			);
 			path = NavigationView;
+			sourceTree = "<group>";
+		};
+		7975E1C22C7CBDBB00DF151C /* TabbarView */ = {
+			isa = PBXGroup;
+			children = (
+				7975E1C32C7CBDCA00DF151C /* TabbarView.swift */,
+			);
+			path = TabbarView;
 			sourceTree = "<group>";
 		};
 		7993E8392C4FF10C00EA7785 = {
@@ -394,6 +405,7 @@
 			files = (
 				79C9E9BA2C777D6B00258692 /* AppMessageView.swift in Sources */,
 				79C9E9C42C77815400258692 /* SplashCoordinator.swift in Sources */,
+				7975E1C42C7CBDCA00DF151C /* TabbarView.swift in Sources */,
 				79C9E9BC2C777DC400258692 /* AppLoadingView.swift in Sources */,
 				79C9E9B82C74DC5600258692 /* AppView.swift in Sources */,
 				79C9E9B62C74DC4D00258692 /* AppCoordinator.swift in Sources */,
