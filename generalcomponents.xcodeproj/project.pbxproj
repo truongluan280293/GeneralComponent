@@ -14,6 +14,7 @@
 		7975E1BE2C7B6EE100DF151C /* AppHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7975E1BD2C7B6EE100DF151C /* AppHeaderView.swift */; };
 		7975E1C12C7B739A00DF151C /* NavView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7975E1C02C7B739A00DF151C /* NavView.swift */; };
 		7975E1C42C7CBDCA00DF151C /* TabbarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7975E1C32C7CBDCA00DF151C /* TabbarView.swift */; };
+		7975E1C62C7CD3B200DF151C /* BasicTabbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7975E1C52C7CD3B200DF151C /* BasicTabbar.swift */; };
 		7993E8462C4FF10C00EA7785 /* generalcomponentsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7993E8452C4FF10C00EA7785 /* generalcomponentsApp.swift */; };
 		7993E8482C4FF10C00EA7785 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7993E8472C4FF10C00EA7785 /* ContentView.swift */; };
 		7993E84A2C4FF10C00EA7785 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7993E8492C4FF10C00EA7785 /* Assets.xcassets */; };
@@ -55,6 +56,7 @@
 		7975E1BD2C7B6EE100DF151C /* AppHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppHeaderView.swift; sourceTree = "<group>"; };
 		7975E1C02C7B739A00DF151C /* NavView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavView.swift; sourceTree = "<group>"; };
 		7975E1C32C7CBDCA00DF151C /* TabbarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarView.swift; sourceTree = "<group>"; };
+		7975E1C52C7CD3B200DF151C /* BasicTabbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicTabbar.swift; sourceTree = "<group>"; };
 		7993E8422C4FF10C00EA7785 /* generalcomponents.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = generalcomponents.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7993E8452C4FF10C00EA7785 /* generalcomponentsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = generalcomponentsApp.swift; sourceTree = "<group>"; };
 		7993E8472C4FF10C00EA7785 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -154,6 +156,7 @@
 			isa = PBXGroup;
 			children = (
 				7975E1C32C7CBDCA00DF151C /* TabbarView.swift */,
+				7975E1C52C7CD3B200DF151C /* BasicTabbar.swift */,
 			);
 			path = TabbarView;
 			sourceTree = "<group>";
@@ -418,6 +421,7 @@
 				7975E1B72C7A16D800DF151C /* HomeView.swift in Sources */,
 				7975E1BA2C7A178700DF151C /* AppState.swift in Sources */,
 				7975E1B22C7A0CCA00DF151C /* UInt64+Ext.swift in Sources */,
+				7975E1C62C7CD3B200DF151C /* BasicTabbar.swift in Sources */,
 				7975E1B52C7A16B500DF151C /* HomeCoordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

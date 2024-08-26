@@ -11,6 +11,7 @@ import SwiftUI
 struct TabbarView: View {
     var items: [ItemModel] = []
     var onTap: ((String) -> Void)?
+    
     private let height: CGFloat = 50
     
     // MARK: - Entry point
