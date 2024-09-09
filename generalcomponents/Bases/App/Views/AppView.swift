@@ -10,6 +10,7 @@ import Combine
 
 struct AppView: View {
     @Environment(AppState.self) private var state
+    
     var body: some View {
         switch state.appPhase {
         case .appView:

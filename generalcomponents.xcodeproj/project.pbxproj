@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		79060FCA2C89E9A400298CF2 /* ThemeProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79060FC92C89E9A400298CF2 /* ThemeProtocol.swift */; };
+		79060FCC2C89EA2800298CF2 /* ColorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79060FCB2C89EA2800298CF2 /* ColorProtocol.swift */; };
+		79060FD02C89EAE900298CF2 /* ThemeDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79060FCF2C89EAE900298CF2 /* ThemeDefault.swift */; };
+		79060FD22C89EB0B00298CF2 /* ColorDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79060FD12C89EB0B00298CF2 /* ColorDefault.swift */; };
+		79060FD82C8A006D00298CF2 /* ThemeSeconds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79060FD72C8A006D00298CF2 /* ThemeSeconds.swift */; };
+		79060FDA2C8A008300298CF2 /* ColorSeconds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79060FD92C8A008300298CF2 /* ColorSeconds.swift */; };
+		79060FDD2C8F287900298CF2 /* AppSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79060FDC2C8F287900298CF2 /* AppSettings.swift */; };
 		7975E1B22C7A0CCA00DF151C /* UInt64+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7975E1B12C7A0CCA00DF151C /* UInt64+Ext.swift */; };
 		7975E1B52C7A16B500DF151C /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7975E1B42C7A16B500DF151C /* HomeCoordinator.swift */; };
 		7975E1B72C7A16D800DF151C /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7975E1B62C7A16D800DF151C /* HomeView.swift */; };
@@ -49,6 +56,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		79060FC92C89E9A400298CF2 /* ThemeProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeProtocol.swift; sourceTree = "<group>"; };
+		79060FCB2C89EA2800298CF2 /* ColorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorProtocol.swift; sourceTree = "<group>"; };
+		79060FCF2C89EAE900298CF2 /* ThemeDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeDefault.swift; sourceTree = "<group>"; };
+		79060FD12C89EB0B00298CF2 /* ColorDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorDefault.swift; sourceTree = "<group>"; };
+		79060FD72C8A006D00298CF2 /* ThemeSeconds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeSeconds.swift; sourceTree = "<group>"; };
+		79060FD92C8A008300298CF2 /* ColorSeconds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorSeconds.swift; sourceTree = "<group>"; };
+		79060FDC2C8F287900298CF2 /* AppSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSettings.swift; sourceTree = "<group>"; };
 		7975E1B12C7A0CCA00DF151C /* UInt64+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UInt64+Ext.swift"; sourceTree = "<group>"; };
 		7975E1B42C7A16B500DF151C /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
 		7975E1B62C7A16D800DF151C /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -101,6 +115,51 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		79060FC82C89E99300298CF2 /* Themes */ = {
+			isa = PBXGroup;
+			children = (
+				79060FD62C89FE0100298CF2 /* ThemeSeconds */,
+				79060FD32C89F53000298CF2 /* ThemeDefault */,
+				79060FCD2C89EAC600298CF2 /* Base */,
+			);
+			path = Themes;
+			sourceTree = "<group>";
+		};
+		79060FCD2C89EAC600298CF2 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				79060FC92C89E9A400298CF2 /* ThemeProtocol.swift */,
+				79060FCB2C89EA2800298CF2 /* ColorProtocol.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		79060FD32C89F53000298CF2 /* ThemeDefault */ = {
+			isa = PBXGroup;
+			children = (
+				79060FCF2C89EAE900298CF2 /* ThemeDefault.swift */,
+				79060FD12C89EB0B00298CF2 /* ColorDefault.swift */,
+			);
+			path = ThemeDefault;
+			sourceTree = "<group>";
+		};
+		79060FD62C89FE0100298CF2 /* ThemeSeconds */ = {
+			isa = PBXGroup;
+			children = (
+				79060FD72C8A006D00298CF2 /* ThemeSeconds.swift */,
+				79060FD92C8A008300298CF2 /* ColorSeconds.swift */,
+			);
+			path = ThemeSeconds;
+			sourceTree = "<group>";
+		};
+		79060FDB2C8F286900298CF2 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				79060FDC2C8F287900298CF2 /* AppSettings.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
 		7975E1B02C7A0CBB00DF151C /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -238,6 +297,8 @@
 		79C9E9B32C74DBE100258692 /* Bases */ = {
 			isa = PBXGroup;
 			children = (
+				79060FDB2C8F286900298CF2 /* Settings */,
+				79060FC82C89E99300298CF2 /* Themes */,
 				7975E1BB2C7B6EC200DF151C /* Views */,
 				7975E1B02C7A0CBB00DF151C /* Extensions */,
 				79C9E9C52C77826500258692 /* Constants */,
@@ -409,18 +470,25 @@
 				79C9E9BA2C777D6B00258692 /* AppMessageView.swift in Sources */,
 				79C9E9C42C77815400258692 /* SplashCoordinator.swift in Sources */,
 				7975E1C42C7CBDCA00DF151C /* TabbarView.swift in Sources */,
+				79060FD82C8A006D00298CF2 /* ThemeSeconds.swift in Sources */,
 				79C9E9BC2C777DC400258692 /* AppLoadingView.swift in Sources */,
 				79C9E9B82C74DC5600258692 /* AppView.swift in Sources */,
 				79C9E9B62C74DC4D00258692 /* AppCoordinator.swift in Sources */,
+				79060FCC2C89EA2800298CF2 /* ColorProtocol.swift in Sources */,
 				7975E1BE2C7B6EE100DF151C /* AppHeaderView.swift in Sources */,
+				79060FD22C89EB0B00298CF2 /* ColorDefault.swift in Sources */,
 				7993E8482C4FF10C00EA7785 /* ContentView.swift in Sources */,
 				7975E1C12C7B739A00DF151C /* NavView.swift in Sources */,
 				7993E8462C4FF10C00EA7785 /* generalcomponentsApp.swift in Sources */,
 				79C9E9C12C77813E00258692 /* SplashView.swift in Sources */,
+				79060FDD2C8F287900298CF2 /* AppSettings.swift in Sources */,
 				79C9E9C72C7782FC00258692 /* Constants.swift in Sources */,
+				79060FD02C89EAE900298CF2 /* ThemeDefault.swift in Sources */,
 				7975E1B72C7A16D800DF151C /* HomeView.swift in Sources */,
 				7975E1BA2C7A178700DF151C /* AppState.swift in Sources */,
 				7975E1B22C7A0CCA00DF151C /* UInt64+Ext.swift in Sources */,
+				79060FDA2C8A008300298CF2 /* ColorSeconds.swift in Sources */,
+				79060FCA2C89E9A400298CF2 /* ThemeProtocol.swift in Sources */,
 				7975E1C62C7CD3B200DF151C /* BasicTabbar.swift in Sources */,
 				7975E1B52C7A16B500DF151C /* HomeCoordinator.swift in Sources */,
 			);
