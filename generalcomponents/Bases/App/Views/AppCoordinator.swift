@@ -12,9 +12,7 @@ struct AppCoordinator: View {
         ZStack {
             AppView()
             AppMessageView()
-                .opacity(0)
             AppLoadingView()
-                .opacity(0)
         }
         .toolbar(.hidden, for: .navigationBar, .tabBar)
     }

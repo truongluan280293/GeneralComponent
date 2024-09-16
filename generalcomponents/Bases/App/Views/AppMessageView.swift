@@ -8,8 +8,19 @@
 import SwiftUI
 
 struct AppMessageView: View {
+    @State private var showMessage: Bool = false
+    
     var body: some View {
-        Text("Hello, Message App View!")
+        mainContent
+    }
+    
+    @ViewBuilder
+    private var mainContent: some View {
+        if !showMessage {
+            EmptyView()
+        } else {
+            Text("Hello, Message App View!")
+        }
     }
 }
 

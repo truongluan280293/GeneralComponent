@@ -8,8 +8,19 @@
 import SwiftUI
 
 struct AppLoadingView: View {
+    @State private var showLoading: Bool = false
+    
     var body: some View {
-        Text("Hello, App loading View!")
+        mainContent
+    }
+    
+    @ViewBuilder
+    private var mainContent: some View {
+        if !showLoading {
+            EmptyView()
+        } else {
+            Text("Hello, App loading View!")
+        }
     }
 }
 
