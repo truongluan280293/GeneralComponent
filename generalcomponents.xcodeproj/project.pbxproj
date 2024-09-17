@@ -14,6 +14,7 @@
 		79060FD82C8A006D00298CF2 /* ThemeSeconds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79060FD72C8A006D00298CF2 /* ThemeSeconds.swift */; };
 		79060FDA2C8A008300298CF2 /* ColorSeconds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79060FD92C8A008300298CF2 /* ColorSeconds.swift */; };
 		79060FDD2C8F287900298CF2 /* AppSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79060FDC2C8F287900298CF2 /* AppSettings.swift */; };
+		79060FE22C98653200298CF2 /* TextInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79060FE12C98653200298CF2 /* TextInputView.swift */; };
 		7975E1B22C7A0CCA00DF151C /* UInt64+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7975E1B12C7A0CCA00DF151C /* UInt64+Ext.swift */; };
 		7975E1B52C7A16B500DF151C /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7975E1B42C7A16B500DF151C /* HomeCoordinator.swift */; };
 		7975E1B72C7A16D800DF151C /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7975E1B62C7A16D800DF151C /* HomeView.swift */; };
@@ -63,6 +64,7 @@
 		79060FD72C8A006D00298CF2 /* ThemeSeconds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeSeconds.swift; sourceTree = "<group>"; };
 		79060FD92C8A008300298CF2 /* ColorSeconds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorSeconds.swift; sourceTree = "<group>"; };
 		79060FDC2C8F287900298CF2 /* AppSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSettings.swift; sourceTree = "<group>"; };
+		79060FE12C98653200298CF2 /* TextInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextInputView.swift; sourceTree = "<group>"; };
 		7975E1B12C7A0CCA00DF151C /* UInt64+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UInt64+Ext.swift"; sourceTree = "<group>"; };
 		7975E1B42C7A16B500DF151C /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
 		7975E1B62C7A16D800DF151C /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -160,6 +162,14 @@
 			path = Settings;
 			sourceTree = "<group>";
 		};
+		79060FE02C98651600298CF2 /* TextInputView */ = {
+			isa = PBXGroup;
+			children = (
+				79060FE12C98653200298CF2 /* TextInputView.swift */,
+			);
+			path = TextInputView;
+			sourceTree = "<group>";
+		};
 		7975E1B02C7A0CBB00DF151C /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -188,6 +198,7 @@
 		7975E1BB2C7B6EC200DF151C /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				79060FE02C98651600298CF2 /* TextInputView */,
 				7975E1C22C7CBDBB00DF151C /* TabbarView */,
 				7975E1BF2C7B738900DF151C /* NavigationView */,
 				7975E1BC2C7B6ED100DF151C /* AppHeader */,
@@ -487,6 +498,7 @@
 				7975E1B72C7A16D800DF151C /* HomeView.swift in Sources */,
 				7975E1BA2C7A178700DF151C /* AppState.swift in Sources */,
 				7975E1B22C7A0CCA00DF151C /* UInt64+Ext.swift in Sources */,
+				79060FE22C98653200298CF2 /* TextInputView.swift in Sources */,
 				79060FDA2C8A008300298CF2 /* ColorSeconds.swift in Sources */,
 				79060FCA2C89E9A400298CF2 /* ThemeProtocol.swift in Sources */,
 				7975E1C62C7CD3B200DF151C /* BasicTabbar.swift in Sources */,

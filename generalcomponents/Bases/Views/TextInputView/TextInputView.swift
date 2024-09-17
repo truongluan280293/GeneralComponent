@@ -1,18 +1,51 @@
-//
-//  TextInputView.swift
-//  generalcomponents
-//
-//  Created by Truong Luan on 9/16/24.
-//
-
 import SwiftUI
+// TODO: https://www.fivestars.blog/articles/custom-view-styles/ 
+struct TextInputConfiguration {
+    
+}
 
-struct TextInputView: View {
+protocol TextInputStyle {
+    associatedtype Body: View
+    typealias Configuration = TextInputConfiguration
+    
+    func makeBody(configuration: Self.Configuration) -> Self.Body
+}
+
+struct BasicTextInputStyle: TextInputStyle {
+    
+    func makeBody(configuration: Configuration) -> some View {
+        EmptyView()
+    }
+}
+
+
+
+struct TextInputView<TopView: View>: View {
+    var topView: TopView
+    
+    init(@ViewBuilder top: () -> TopView) {
+        self.topView = top()
+    }
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            topView
+            Text("I am a text field")
+                .padding()
+                .background(.orange, in: .rect(cornerRadius: 8))
+        }
+    }
+}
+
+struct SampleView: View {
+    var body: some View {
+        TextInputView {
+            Text("User name")
+        }
+        
     }
 }
 
 #Preview {
-    TextInputView()
+    SampleView()
 }
