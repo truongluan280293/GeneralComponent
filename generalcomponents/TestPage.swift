@@ -12,37 +12,19 @@ struct TestPage: View {
     @State var realValue: Float = 2
     
     @State var valueSlider2: CGFloat = 1
+    
+    
+    @State var age: Float = 2
+    @State var weight: Float = 2
     var body: some View {
         VStack {
             HStack {
                 Text("Age:")
                 Spacer()
             }
-            ContentView(percent: $valueSlider, value: $realValue, range: 10.7...250.2, isRounded: true)
-            
-//            Slider(value: $valueSlider2, in: 10...100, step: 1) { isedit in
-//                
-//            }
-//            Text("Value slider: \(valueSlider2)")
-//            Slider(value: $valueSlider2, in: 0...100.5) {
-//                Text("Hello slider")
-//            } onEditingChanged: { isEdit in
-//                print("value change: \(isEdit)")
-//            }
-
-//            Slider(value: $valueSlider2, in: 0...200.5) {
-//                Text("Text slider")
-//            } minimumValueLabel: {
-//                Text("minimum label")
-//            } maximumValueLabel: {
-//                Text("maximum label")
-//            } onEditingChanged: { isedit
-//                in
-//                print("==>> slider is change: \(isedit)")
-//            }
-            
-            
-
+            ContentView(value: $realValue, range: 100...250, format: .text("%@ cm"))
+            ContentView(value: $age, range: 10...100, format: .plain)
+            ContentView(value: $weight, range: 40...200, format: .number("%ld kg"))
         }
         .padding(.horizontal, 10)
 

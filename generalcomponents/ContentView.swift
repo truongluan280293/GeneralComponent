@@ -9,10 +9,7 @@ import SwiftUI
 
 // TODO: make the callback to format the value before display it
 // TODO: Add min image, max image
-
-
 struct ContentView: View {
-    
     private let horPadding: CGFloat = 10
     
     private let top: CGFloat = 30
@@ -32,17 +29,17 @@ struct ContentView: View {
     @State private var sW: CGFloat = 0
     private let sH: CGFloat = 60
     
-    @Binding var valuePercent: CGFloat // [0-100]%
+    @State private var valuePercent: CGFloat = 0 // [0-100]%
+    private var valueFormat: ContentView.ValueFormat
     
     @Binding var value: Float
     var range: ClosedRange<Float>
-    var isRounded: Bool
     
-    init(percent: Binding<CGFloat>, value: Binding<Float>, range: ClosedRange<Float>, isRounded: Bool = true) {
-        self._valuePercent = percent
+    
+    init(value: Binding<Float>, range: ClosedRange<Float>, format: ContentView.ValueFormat = .plain) {
         self._value = value
         self.range = range
-        self.isRounded = isRounded
+        self.valueFormat = format
     }
     
     var body: some View {
@@ -101,10 +98,14 @@ struct ContentView: View {
                                            radius: sizeThumb)
                     context.fill(circle, with: .color(.brown))
                     
-                    let iText = Text("Hello! I am Luan Truong")
-                    let text = context.resolve(iText)
+                    
+                    let iText = Text(getText())
+                        .font(.system(size: 14, weight: .medium, design: .rounded))
+                    var text = context.resolve(iText)
+                    text.shading = .color(.brown)
+                    
                     let textSize = text.measure(in: size)
-                    let textY = CGFloat(0)
+                    let textY = CGFloat(10)
                     let centerText = CGPoint(x: centerP.x - textSize.width/2,
                                             y: textY)
                     context.draw(text, in: .init(origin: centerText,
@@ -121,22 +122,14 @@ struct ContentView: View {
                             
                             let disValue = range.upperBound - range.lowerBound
                             let xValue = ((percent*disValue)/100)+range.lowerBound
-                            print("==>> raw value: \(xValue)")
-                            if isRounded {
-                                let tmpValue = value.rounded(.towardZero)
-                                let next = tmpValue + 1
-                                let pre = tmpValue - 1
-                                print("     pre: \(pre) | next: \(next) | cur_v: \(tmpValue)")
-                                if xValue >= next || xValue <= pre {
-                                    value = xValue.rounded(.towardZero)
-                                    centerControl = x
-                                    print("     ------->>> value: \(value)")
-                                }
-                            } else {
-                                // TODO: update if reach the next or previous value
-                                centerControl = x
-                            }
                             
+                            let tmpValue = value.rounded(.towardZero)
+                            let next = tmpValue + 1
+                            let pre = tmpValue - 1
+                            if xValue >= next || xValue <= pre {
+                                value = xValue.rounded(.towardZero)
+                            }
+                            centerControl = x
                         })
                 )
                 HStack {
@@ -207,8 +200,29 @@ struct ContentView: View {
         let x = (percent*dis)/100
         return x + minValue
     }
+    
+    private func getText() -> String {
+        switch valueFormat {
+        case .number(let str):
+            return String(format: str, Int(value))
+        case .text(let str):
+            return String(format: str, "\(Int(value))")
+        case .plain:
+            return "\(Int(value))"
+        }
+    }
+}
+
+extension ContentView {
+    enum ValueFormat {
+        /// Must follow %@ format
+        case text(String) // example: ValueFormat.text("some text %@ some text")
+        /// Must follow %ld format
+        case number(String) // example: ValueFormat.text("some text %ld some text")
+        case plain
+    }
 }
 
 #Preview {
-    ContentView(percent: .constant(10), value: .constant(16), range: 10.2...20.8)
+    ContentView(value: .constant(16), range: 10.2...20.8)
 }
